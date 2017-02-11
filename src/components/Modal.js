@@ -16,10 +16,8 @@ class Modal extends Component {
 		    	<div className="video">
 		    		<iframe 
 		    			src={"https://player.vimeo.com/video/" + this.props.result.id} 
-		    			frameborder="0" 
-		    			webkitallowfullscreen 
-		    			mozallowfullscreen 
-		    			allowfullscreen
+		    			frameBorder="0"
+		    			allowFullScreen
 		    		/>
 		    	</div>
 		    	<div className="info">
