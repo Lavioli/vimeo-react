@@ -19,8 +19,10 @@ class App extends Component {
   render() {
     return (
       <div>
-        <header id="logo">Vimeo</header>
-        <div className="results_wrapper">{(this.props.channelData) ? this.renderDataArr(this.props.channelData) : ''}</div>
+        <header id="logo">React Vimeo</header>
+        <div className="results_wrapper">
+          {(this.props.channelData) ? this.renderDataArr(this.props.channelData) : ''}
+        </div>
       </div>
       
     );
