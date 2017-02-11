@@ -9,7 +9,7 @@ body {
 
 #root {
 	margin: auto;
-	width: 98vw;
+	width: 1200px;
 }
 
 #logo {
@@ -108,8 +108,17 @@ body {
 	color: gray;
 }
 
+.comment_button {
+	background-color: transparent;
+    border: none;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
 .card_button {
-	float: right;
 	display: block;
 	margin-right: 15px;
 }
@@ -152,7 +161,7 @@ iframe {
 	margin: 0 60px;
 }
 
-button {
+.card_button, .close_button {
 	background-color: #e7e7e7;
 	border: none;
 	color: black;
@@ -161,8 +170,9 @@ button {
 	text-decoration: none;
 	display: inline-block;
 	font-size: 14px;
-	margin: 4px 2px;
 	cursor: pointer;
+	margin-bottom: 4px;
+	float: right;
 }
 
 button:focus {
@@ -170,17 +180,10 @@ button:focus {
 	outline:0 !important;
 }
 
-button:active {
-	text-decoration: none;
-}
 
 .upload_date {
 	color: gray;
 	font-size: 14px;
-}
-
-.close_button {
-	float: right;
 }
 
 .backdrop {
