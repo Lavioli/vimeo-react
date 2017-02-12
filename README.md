@@ -6,7 +6,7 @@ Live Demo: https://lavioli.github.io/vimeo-react/
 
 - [How to use React Vimeo](#how-to)
 - [Running client](#running-client)
-- [Deploy to gh-pages](#deploy)
+- [Deploy to github pages](#deploy)
 
 ## How to use React Vimeo
 
@@ -20,7 +20,7 @@ Live Demo: https://lavioli.github.io/vimeo-react/
 * Once the repo is cloned, run `npm install ` to install all packages.
 * To run, type `npm start ` on localhost:3000
 
-## Deploy to gh-pages
+## Deploy to github pages
 * Make sure the "homepage" in `package.json` refers to correct github-pages link.
 * `npm run deploy`
 
