@@ -4,9 +4,9 @@ Live Demo: https://lavioli.github.io/vimeo-react/
 
 ## Table of Contents
 
-- [How to use React Vimeo](#how-to)
+- [How to use React Vimeo](#how-to-use-react-vimeo)
 - [Running client](#running-client)
-- [Deploy to github pages](#deploy-to-github)
+- [Deploy to github pages](#deploy-to-github-pages)
 
 ## How to use React Vimeo
 
