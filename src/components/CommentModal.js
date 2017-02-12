@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Comment from './Comment';
+import Loading from './Loading';
 import { connect } from 'react-redux';
 import * as actions from '../redux/actions';
 
@@ -17,12 +18,13 @@ class CommentModal extends Component {
 	  })
 	}
 	render() {
-		if (this.props.isOpen === false || !this.props.comments) return null;
+		if (this.props.isOpen === false) return null;
+		if (!this.props.comments) return <Loading />;
 		return (
 		  <div>
 		    <div className="modal">
 		    	<h2 id="comments_heading">Comments</h2>
-		    	{(this.props.comments) ? this.renderDataArr(this.props.comments.data) : null}
+		    	{this.renderDataArr(this.props.comments.data)}
 		    </div>
 		    <div 
 		    	className="backdrop" 
