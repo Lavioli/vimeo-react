@@ -4,7 +4,7 @@ import * as actions from './actions';
 const initialState = {
 	channelData: null,
 	error: null,
-	hi: 1
+	comments: null
 }
 
 export default handleActions (
@@ -15,5 +15,14 @@ export default handleActions (
 		[actions.fetchChannelError]: (state, action) => {
 			return {...state, error: action.payload}
 		},
+		[actions.fetchCommentsSuccess]: (state, action) => {
+			return {...state, comments: action.payload}
+		},
+		[actions.fetchCommentError]: (state, action) => {
+			return {...state, error: action.payload}
+		},
+		[actions.clearComments]: (state, action) => {
+			return {...state, comments: null}
+		}
 	}, initialState
 );

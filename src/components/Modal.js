@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 
-class Modal extends Component {
+class CommentModal extends Component {
 	close(e) {
 	  e.preventDefault();
 	  if (this.props.onClose) {
 	    this.props.onClose();
 	  }
 	}
-
 	render() {
 		if (this.props.isOpen === false) return null;
 		return (
@@ -71,4 +70,4 @@ class Modal extends Component {
 
 }
 
-export default Modal;
+export default CommentModal;

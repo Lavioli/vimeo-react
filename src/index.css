@@ -157,7 +157,7 @@ iframe {
     margin: 0 1vh;
 }
 
-.info {
+.info, #comments_heading {
 	margin: 0 60px;
 }
 
@@ -184,6 +184,15 @@ button:focus {
 .upload_date {
 	color: gray;
 	font-size: 14px;
+}
+
+.comments {
+	margin: 20px 60px;
+}
+
+.no-profile-pic {
+	height: 30px;
+	width: 30px;
 }
 
 .backdrop {
@@ -305,7 +314,7 @@ button:focus {
 		height: 230px;
 		margin: 0;
 	}
-	.info {
+	.info, #comments_heading {
 	    margin: 0 6px;
 	}
 
