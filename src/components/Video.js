@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import Modal from './Modal';
 import CommentModal from './CommentModal';
-import { connect } from 'react-redux';
-import * as actions from '../redux/actions';
 
 class Video extends Component {
 	constructor(props) {
@@ -32,14 +30,14 @@ class Video extends Component {
 		})
 	}
 	closeCommentModal() {
-		this.props.dispatch(actions.clearComments());
+		this.props.clearComments();
 		this.setState({
 			isCommentModalOpen: false
 		})
 	}
 	onClickFetchComments(videoId, e) {
 		e.preventDefault();
-		this.props.dispatch(actions.fetchComments(videoId));
+		this.props.fetchComments(e, videoId);
 		this.openCommentModal();
 	}
 	render () {
@@ -101,16 +99,16 @@ class Video extends Component {
 					onClose={this.closeModal} 
 					result={this.props.result}
 				/>
-				{(this.state.isCommentModalOpen === true) ? <CommentModal 
+				{(this.state.isCommentModalOpen === true) ? 
+					<CommentModal 
 					isOpen={this.state.isCommentModalOpen} 
 					onClose={this.closeCommentModal} 
 					comments={this.props.comments}
-				/> : ''}
+					/> : ''
+				}
 			</div>
 		);
 	}
 }
 
-export default connect(
-	({ comments }) => ({ comments })
-)(Video);
+export default Video;
