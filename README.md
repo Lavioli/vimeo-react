@@ -7,6 +7,7 @@ Live Demo: https://lavioli.github.io/vimeo-react/
 - [How to use React Vimeo](#how-to-use-react-vimeo)
 - [Running client](#running-client)
 - [Deploy to github pages](#deploy-to-github-pages)
+- [Running tests](#running-tests)
 
 ## How to use React Vimeo
 
@@ -23,5 +24,8 @@ Live Demo: https://lavioli.github.io/vimeo-react/
 ## Deploy to github pages
 * Make sure the "homepage" in `package.json` refers to correct github-pages link.
 * `npm run deploy`
+
+## Running tests
+* `npm run test`
 
 Made with <3 by Lavie

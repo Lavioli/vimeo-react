@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
 import Comment from './Comment';
 import Loading from './Loading';
-import { connect } from 'react-redux';
-import * as actions from '../redux/actions';
 
 class CommentModal extends Component {
 	close(e) {
 	  e.preventDefault();
 	  if (this.props.onClose) {
 	    this.props.onClose();
-	    this.props.dispatch(actions.clearComments());
 	  }
 	}
 	renderDataArr (arr) {
@@ -33,7 +30,6 @@ class CommentModal extends Component {
 		  </div>
 		)
 	}
-
 }
 
-export default connect()(CommentModal);
+export default CommentModal;
