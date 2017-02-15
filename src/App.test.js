@@ -7,6 +7,8 @@ import sinon from 'sinon';
 import { Provider } from 'react-redux';
 import store from './redux/store';
 import App from './components/App';
+import Video from './components/Video';
+import * as vimeoResult from './redux/vimeo.json';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
@@ -27,7 +29,7 @@ describe('<App />', () => {
 		sinon.spy(App.prototype, 'componentDidMount');
 		const wrapper = mount(<App store={store} />);
 		expect(App.prototype.componentDidMount.calledOnce).to.equal(true);
-	})
+	});
 
 	it('should render the header logo text', () => {
 	  const header = <header id="logo">React Vimeo</header>;
@@ -54,5 +56,35 @@ describe('<App />', () => {
 		expect(wrapper.get(0).selector.props.error).to.equal(null);
 	});
 	
+});
+
+describe('<Video />', () => {
+	beforeEach(() => {
+		const result = vimeoResult[0];
+		component = mount(<Video result={result} />);
+	 });
+
+	it('should render the div containing className card', () => {
+		expect(component.find('.card').exists()).to.equal(true);
+	});
+
+	it('should render the a element with the url from result', () => {
+		const url = (
+			<a 
+				className="card_url" 
+				href={vimeoResult[0].url} 
+				target="_blank">
+				<img 
+					className="card_img" 
+					src={vimeoResult[0].thumbnail_large} 
+					alt="thumbnail"
+				/>
+			</a>
+		);
+		expect(component.find('.card_url').exists()).to.equal(true);
+		expect(component.contains(url)).to.equal(true);
+	});
+
+
 });
 
